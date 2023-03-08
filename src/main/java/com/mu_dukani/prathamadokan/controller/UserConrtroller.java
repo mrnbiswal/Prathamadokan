@@ -28,6 +28,11 @@ public class UserConrtroller implements ErrorController {
 		this.userservice = userservice;
 	}
 
+//	@GetMapping("/hello")
+//	public String hello() {
+//		return "Hello World";
+//	}
+
 	@PostMapping()
 	public ResponseEntity<User> saveUser(@RequestBody User user) {
 		return new ResponseEntity<User>(userservice.saveUser(user), HttpStatus.CREATED);

@@ -20,6 +20,18 @@ public class User {
 	@Column(name = "email_id")
 	private String emailId;
 
+	public User() {
+
+	}
+
+	public User(long id, String name, String mobileNumber, String emailId) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.mobileNumber = mobileNumber;
+		this.emailId = emailId;
+	}
+
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", name=" + name + ", mobileNumber=" + mobileNumber + ", emailId=" + emailId + "]";
